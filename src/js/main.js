@@ -1,19 +1,17 @@
 
 
-const text = document.querySelector(".editor--js");
+let text = document.querySelector(".editor--js");
 const save =  document.querySelector(".buttons__save--js");
 const load = document.querySelector(".buttons__load--js");
 
 
-text.addEventListener('keyup', (e) => {
-  let textEditor = e.target.value;
-  if (textEditor) {
-    save.addEventListener('click', (e) => {
-      localStorage.setItem('text', textEditor);
-    });  
-  }
-});
+
+save.addEventListener('click', (e) => {
+  e.preventDefault();
+  localStorage.setItem('text', text.value);
+})
 
 load.addEventListener('click', (e) => {
-  text.innerHTML = localStorage.getItem('text');
+  e.preventDefault();
+  text.value = localStorage.getItem('text');
 })
