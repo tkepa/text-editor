@@ -308,6 +308,22 @@ template {
 [hidden] {
   display: none; }
 
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -333,22 +349,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
 
 .container {
   background: #ffd2d2;
@@ -406,25 +406,11 @@ body {
     margin: 10px;
     font-style: "PT Sans", sans-serif;
     font-size: 18px;
-    background: #fff; }
+    background: #fff;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out; }
     .buttons__button:hover {
-      background-color: #e73c7e;
-      color: #fff;
-      -webkit-animation: hover 1s;
-              animation: hover 1s; }
-
-@-webkit-keyframes hover {
-  from {
-    background: #fff; }
-  to {
-    background-color: #e73c7e;
-    color: #fff; } }
-
-@keyframes hover {
-  from {
-    background: #fff; }
-  to {
-    background-color: #e73c7e;
-    color: #fff; } }
+      background-color: #e73c7e; }
 
 /*# sourceMappingURL=main.css.map */
